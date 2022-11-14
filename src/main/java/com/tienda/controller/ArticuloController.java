@@ -18,7 +18,7 @@ public class ArticuloController {
     
     @GetMapping("/articulo/listado")
     public String inicio(Model model){
-        var texto = "Estamos en semana 4";
+        var texto = "Articulo";
         model.addAttribute("mensaje", texto);
         
      
