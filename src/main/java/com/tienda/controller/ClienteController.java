@@ -22,8 +22,8 @@ public class ClienteController {
         model.addAttribute("mensaje", texto);
         
      
-       var clientes = clienteService.getClientes(false);
-        
+       //var clientes = clienteService.getClientes(false);
+         var clientes = clienteService.getClientesPorApellido("Mena Loria");
        
         model.addAttribute("clientes", clientes);
         

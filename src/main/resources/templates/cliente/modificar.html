@@ -3,12 +3,12 @@
     <xmlns:th="http://www.w3.org/1999/xhtml">
     <head>
         <title>TechShop</title>
-        <meta charset="UTF-8">
-
+        <meta charset="UTF-8"/>
+    <link href="/css/menu.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <header th:replace="layout/plantilla :: header"/>
-        
+         <div class="contenido">
         <h1>Datos de cliente</h1>
         <a th:href="@{/cliente/listado}">Regresar</a>
         
@@ -26,23 +26,24 @@
             
             <label for="apellidos">Apellidos</label>
             <input type="text" name="apellidos" th:field="*{apellidos}"/>
-            <br>
+            <br/>
             
             <label for="correo">Correo</label>
             <input type="email" name="correo" th:field="*{correo}"/>
-            <br>
+            <br/>
             
             <label for="telefono">Telefono</label>
             <input type="tel" name="telefono" th:field="*{telefono}"/>
-            <br>
+            <br/>
             
-            <label for="credito">Credito</label>
-            <input type="credito" name="credito" th:field="*{credito}"/>
-            <br>
+            <label for="limite">limite de credito</label>
+            <input type="credito" name="credito" th:field="*{credito.limite}"/>
+            <hr/>
             
             <input type="submit" name="guardar" value="Guardar"/>
             
         </form>
+         </div>
         <footer th:replace="layout/plantilla :: footer"/>
         
     </body>

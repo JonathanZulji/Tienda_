@@ -1,4 +1,4 @@
-package com.tienda.domain;
+ package com.tienda.domain;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
