@@ -32,6 +32,28 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+                
+                <dependency>
+                    <groupId>org.thymeleaf.extras</groupId>
+                    <artifactId>bootstrap</artifactId>
+                    <version>5.2.2</version>
+                    
+                </dependency>
+                
+                 <dependency>
+                    <groupId>org.webjars</groupId>
+                    <artifactId>font-awesome</artifactId>
+                    <version>6.2.0</version>
+                    
+                </dependency>
+                
+                 <dependency>
+                    <groupId>org.webjars</groupId>
+                    <artifactId>webjars-locator</artifactId>
+                    <version>0.46</version>
+                    
+                </dependency>
+                
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -63,6 +85,15 @@
 	  <version>5.7.4</version>
 	  <type>jar</type>
 	 </dependency>
+	 <dependency>
+	  <groupId>org.springframework.boot</groupId>
+	  <artifactId>spring-boot-starter-security</artifactId>
+	 </dependency>
+         <dependency>
+	  <groupId>org.springframework.boot</groupId>
+	  <artifactId>spring-boot-starter-security</artifactId>
+	 </dependency>
+         
 	</dependencies>
 
 	<build>

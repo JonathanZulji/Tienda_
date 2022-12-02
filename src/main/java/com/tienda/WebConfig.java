@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
@@ -18,15 +19,15 @@ public class WebConfig implements WebMvcConfigurer {
             return slr;
             
     }
-    
-     public LocaleResolver localeResolver(){
-            var lci = new SessionLocalResolver();
-            lci.setDefaultLocale(new Locale("es"));
+     @Bean
+     public LocaleChangeInterceptor localeChangeInterceptor(){
+            var lci = new LocaleChangeInterceptor();
+            lci.setParamName("lang");
             return lci;
             
     }
      @Override
-     puclic void addInterceptors(InterceptorRegistry registro){
+     public void addInterceptors(InterceptorRegistry registro){
          registro.addInterceptor(localeChangeIntercetor());
          
      }
